@@ -1,86 +1,147 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#101317">
-  <title>Orbit Calculator</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <main class="app-shell">
-    <section class="calculator-panel" aria-label="Orbit calculator">
-      <div class="topbar">
-        <div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
-        <div class="brand-copy">
-          <p class="eyebrow">ORBIT / 01</p>
-          <h1>Calculator</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101317" />
+    <title>Orbit Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="calculator-panel" aria-label="Orbit calculator">
+        <div class="topbar">
+          <div class="brand-mark" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="brand-copy">
+            <p class="eyebrow">ORBIT / 01</p>
+            <h1>Calculator</h1>
+          </div>
+          <div class="live-indicator"><span></span> online</div>
         </div>
-        <div class="live-indicator"><span></span> online</div>
-      </div>
 
-      <div class="display-wrap">
-        <div class="display-meta"><span id="displayLabel">READY</span><span id="memoryBadge" class="memory-badge" hidden>M</span></div>
-        <div class="expression" id="expression" aria-live="polite">0</div>
-        <div class="result" id="result" aria-live="polite">0</div>
-      </div>
-
-      <div class="keypad" role="group" aria-label="Calculator keys">
-        <button class="key key-function" data-action="clear" aria-label="Clear">AC</button>
-        <button class="key key-function" data-action="toggle-sign" aria-label="Toggle positive or negative">+/-</button>
-        <button class="key key-function" data-action="percent" aria-label="Percent">%</button>
-        <button class="key key-operator" data-value="/" aria-label="Divide">÷</button>
-
-        <button class="key" data-value="7">7</button>
-        <button class="key" data-value="8">8</button>
-        <button class="key" data-value="9">9</button>
-        <button class="key key-operator" data-value="*" aria-label="Multiply">×</button>
-
-        <button class="key" data-value="4">4</button>
-        <button class="key" data-value="5">5</button>
-        <button class="key" data-value="6">6</button>
-        <button class="key key-operator" data-value="-" aria-label="Subtract">−</button>
-
-        <button class="key" data-value="1">1</button>
-        <button class="key" data-value="2">2</button>
-        <button class="key" data-value="3">3</button>
-        <button class="key key-operator" data-value="+" aria-label="Add">+</button>
-
-        <button class="key key-zero" data-value="0">0</button>
-        <button class="key" data-action="decimal" aria-label="Decimal point">.</button>
-        <button class="key key-equals" data-action="equals" aria-label="Equals">=</button>
-      </div>
-
-      <div class="utility-row">
-        <button class="text-button" data-action="copy"><span class="button-icon">↗</span> Copy result</button>
-        <div class="memory-controls" aria-label="Memory controls">
-          <button class="memory-button" data-action="memory-clear">MC</button>
-          <button class="memory-button" data-action="memory-recall">MR</button>
-          <button class="memory-button" data-action="memory-add">M+</button>
-          <button class="memory-button" data-action="memory-subtract">M−</button>
+        <div class="display-wrap">
+          <div class="display-meta">
+            <span id="displayLabel">READY</span
+            ><span id="memoryBadge" class="memory-badge" hidden>M</span>
+          </div>
+          <div class="expression" id="expression" aria-live="polite">0</div>
+          <div class="result" id="result" aria-live="polite">0</div>
         </div>
-      </div>
-    </section>
 
-    <aside class="history-panel">
-      <div class="history-heading">
-        <div>
-          <p class="eyebrow">RECENT FLIGHT PATH</p>
-          <h2>History</h2>
+        <div class="keypad" role="group" aria-label="Calculator keys">
+          <button
+            class="key key-function"
+            data-action="clear"
+            aria-label="Clear"
+          >
+            AC
+          </button>
+          <button
+            class="key key-function"
+            data-action="toggle-sign"
+            aria-label="Toggle positive or negative"
+          >
+            +/-
+          </button>
+          <button
+            class="key key-function"
+            data-action="percent"
+            aria-label="Percent"
+          >
+            %
+          </button>
+          <button class="key key-operator" data-value="/" aria-label="Divide">
+            ÷
+          </button>
+
+          <button class="key" data-value="7">7</button>
+          <button class="key" data-value="8">8</button>
+          <button class="key" data-value="9">9</button>
+          <button class="key key-operator" data-value="*" aria-label="Multiply">
+            ×
+          </button>
+
+          <button class="key" data-value="4">4</button>
+          <button class="key" data-value="5">5</button>
+          <button class="key" data-value="6">6</button>
+          <button class="key key-operator" data-value="-" aria-label="Subtract">
+            −
+          </button>
+
+          <button class="key" data-value="1">1</button>
+          <button class="key" data-value="2">2</button>
+          <button class="key" data-value="3">3</button>
+          <button class="key key-operator" data-value="+" aria-label="Add">
+            +
+          </button>
+
+          <button class="key key-zero" data-value="0">0</button>
+          <button class="key" data-action="decimal" aria-label="Decimal point">
+            .
+          </button>
+          <button
+            class="key key-equals"
+            data-action="equals"
+            aria-label="Equals"
+          >
+            =
+          </button>
         </div>
-        <button class="clear-history" data-action="clear-history" aria-label="Clear calculation history">⌫</button>
-      </div>
-      <div class="history-list" id="historyList">
-        <div class="empty-history"><span class="empty-orbit">○</span><p>Your calculations<br>will land here.</p></div>
-      </div>
-      <div class="history-footer"><span>SESSION MEMORY</span><span id="historyCount">0 ENTRIES</span></div>
-    </aside>
-  </main>
-  <footer class="page-footer"><span>LOCAL CALCULATION ENGINE</span><span>⌘ K to focus</span></footer>
-  <div class="toast" id="toast" role="status">Result copied</div>
-  <script src="script.js"></script>
-</body>
+
+        <div class="utility-row">
+          <button class="text-button" data-action="copy">
+            <span class="button-icon">↗</span> Copy result
+          </button>
+          <div class="memory-controls" aria-label="Memory controls">
+            <button class="memory-button" data-action="memory-clear">MC</button>
+            <button class="memory-button" data-action="memory-recall">
+              MR
+            </button>
+            <button class="memory-button" data-action="memory-add">M+</button>
+            <button class="memory-button" data-action="memory-subtract">
+              M−
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <aside class="history-panel">
+        <div class="history-heading">
+          <div>
+            <p class="eyebrow">RECENT FLIGHT PATH</p>
+            <h2>History</h2>
+          </div>
+          <button
+            class="clear-history"
+            data-action="clear-history"
+            aria-label="Clear calculation history"
+          >
+            ⌫
+          </button>
+        </div>
+        <div class="history-list" id="historyList">
+          <div class="empty-history">
+            <span class="empty-orbit">○</span>
+            <p>Your calculations<br />will land here.</p>
+          </div>
+        </div>
+        <div class="history-footer">
+          <span>SESSION MEMORY</span><span id="historyCount">0 ENTRIES</span>
+        </div>
+      </aside>
+    </main>
+    <footer class="page-footer">
+      <span>LOCAL CALCULATION ENGINE</span><span>⌘ K to focus</span>
+    </footer>
+    <div class="toast" id="toast" role="status">Result copied</div>
+    <script src="script.js"></script>
+  </body>
 </html>
